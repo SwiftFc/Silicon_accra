@@ -1,3 +1,3 @@
-This is a repository for my all lessons in silicon accra school
+This is a repository for all lessons in silicon accra school
 
 Silicon Accra
