@@ -12,13 +12,18 @@ for loop,
 conditions, 
 range
 """
+print("Hello Silicon Accra\n")
+print("Welcome to the Number Guessing Game!!!\n")
 
-x = input("Guess the Number: ")
+user = int(input("Guess any Number from 1 to 5: "))
 
-x = int(x)
 
-x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+x = [1,2,3,4,5]
 
 x = random.choice(x)
 
-print(f"The computerised random number is:", x)
+if user == x:
+	print("Successful Guess")
+
+else:
+	print(f"The computerised random number is:", x)
