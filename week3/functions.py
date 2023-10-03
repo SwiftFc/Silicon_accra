@@ -10,5 +10,10 @@ def add_two(number):
     return result
 
 num = int(input("Enter Number: "))
+num.isdigit
+print(num)
 result = add_two(num)
 print(result)
+
+#def meet(name):
+
