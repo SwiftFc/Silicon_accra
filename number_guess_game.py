@@ -13,12 +13,28 @@ conditions,
 range
 """
 
-x = input("Guess the Number: ")
+print("Hello Silicon Accra\n")
+print("Welcome to the Number Guessing Game!!!\n")
 
-x = int(x)
+input("Enter Your Name to get started: ")
+print("\nGuess any Number from 1 to 20")
 
-x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
-x = random.choice(x)
+a = input("Guess the Number: ")
 
-print(f"The computerised random number is:", x)
+a = int(a)
+
+x = (1, 20)
+guess = 0
+x = random.randint(1, 20)
+for i in range(3):
+    if a == x:
+        print("Successful Guess!")
+        break
+
+else:   
+    print("Incorrect Guess")
+    guess += 1
+
+if guess == 3:
+    print("Correct Number is", x)
