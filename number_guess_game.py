@@ -4,48 +4,50 @@ import random
 main - A program where a computer generates
 a random number and a user has to guess the number
 """
-
 """
 Keywords - random, number,
 user input, guess,
-for loop, 
+while loop, 
 conditions, 
 range
 """
-print("Hello Silicon Accra\n")
-print("Welcome to the Number Guessing Game!!!\n")
 
 print("Hello Silicon Accra\n")
 print("Welcome to the Number Guessing Game!!!\n")
 
-input("Enter Your Name to get started: ")
-print("\nGuess any Number from 1 to 20")
+while True:
+    user_name = input("Enter Your Name to get started: ")
 
-user = int(input("Guess any Number from 1 to 5: "))
-
-
-x = [1,2,3,4,5]
-
-a = input("Guess the Number: ")
-
-a = int(a)
-
-x = (1, 20)
-guess = 0
-x = random.randint(1, 20)
-for i in range(3):
-    if a == x:
-        print("Successful Guess!")
+    if user_name.isalpha() != True:
+        print("\nInvalid ***  Expecting Characters only")
+    else:
+        print("Login Successful")
         break
 
-else:   
-    print("Incorrect Guess")
-    guess += 1
 
-if guess == 3:
-    print("Correct Number is", x)
-if user == x:
-	print("Successful Guess")
+print("\nGuess any Number from 1 to 10")
 
-else:
-	print(f"The computerised random number is:", x)
+guess = 0
+max_guess = 8
+
+computer_num = random.randint(1, 10)
+while guess < max_guess:
+    try:
+        user = input("Guess any Number from 1 to 10: ")
+        guess_num = int(user)
+        if guess_num == computer_num:
+            print("Successful Guess!!!")
+            break
+        elif guess_num < computer_num:
+            print("Guess a Higher number")
+        else:
+            print("Guess a lower number")
+
+        guess += 1
+
+    except ValueError:
+        print("Invalid")
+
+if guess_num != computer_num:
+    print("\nSorry, Max Guessses Reached")
+    print("\n\n*********EXIT**************")
