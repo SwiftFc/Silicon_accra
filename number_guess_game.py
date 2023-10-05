@@ -21,11 +21,12 @@ while True:
     if user_name.isalpha() != True:
         print("\nInvalid ***  Expecting Characters only")
     else:
-        print("Login Successful")
+        print("\n****Login Successful💻****")
+        print("****Lets Have Fun🎮🎮🎮****")
         break
 
 
-print("\nGuess any Number from 1 to 10")
+
 
 guess = 0
 max_guess = 8
@@ -33,11 +34,16 @@ max_guess = 8
 computer_num = random.randint(1, 10)
 while guess < max_guess:
     try:
-        user = input("Guess any Number from 1 to 10: ")
+        user = input("\nGuess any Number from 1 to 10: ")
         guess_num = int(user)
         if guess_num == computer_num:
-            print("Successful Guess!!!")
+            print("   Successful Guess!!!")
+            print("\n****You won the Game*****")
+            print("****🏆🏆🏆🏆🏆🏆🏆🏆*****")
+            print("*****Congratulations*****")
             break
+        elif guess_num < 1 or guess_num > 10:
+            print("Please guess a number within the specified range")
         elif guess_num < computer_num:
             print("Guess a Higher number")
         else:
@@ -50,4 +56,4 @@ while guess < max_guess:
 
 if guess_num != computer_num:
     print("\nSorry, Max Guessses Reached")
-    print("\n\n*********EXIT**************")
+print("\n\n*********EXIT💔💔💔**************")
